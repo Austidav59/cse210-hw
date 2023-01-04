@@ -11,6 +11,6 @@ class Program
         string last = Console.ReadLine();
 
 
-        Console.WriteLine($"You is {last}, {first} {last}");
+        Console.WriteLine($"Your name is {last}, {first} {last}");
     }
 }
