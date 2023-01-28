@@ -18,7 +18,9 @@ public class job
 
 public class resume
     {
-        // The C# convention is to start member variables with an underscore _
+    internal readonly object _job1;
+
+    // The C# convention is to start member variables with an underscore _
 
     internal string _name = "";
     internal string _jobs = "";
@@ -31,6 +33,11 @@ public class resume
         }
 
     public static string resume2 { get; internal set; }
+
+    internal static void Display()
+    {
+        throw new NotImplementedException();
+    }
 }
 
 class Program
@@ -56,11 +63,8 @@ class Program
         resume resume1 = new resume();
         resume1._name = "Allison Rose";
 
-        resume1._jobs.add(job1);
-        resume1._jobs.add(job2);
+
 
         resume.Display();
-    
-
-    
+    }
 }
