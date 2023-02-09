@@ -34,7 +34,7 @@ static void Main(string[] args)
 
         if (number == 1)
         {
-            // randomlyt pick a prompt
+            // randomly pick a prompt
             Random R = new Random();
             int someRandomNumber = R.Next(0, prompts.Count());
             Console.WriteLine(prompts.ElementAt(someRandomNumber));
