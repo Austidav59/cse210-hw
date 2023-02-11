@@ -1,3 +1,5 @@
+
+
 using System;
 
 
@@ -7,7 +9,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        // making the scripture list
         List<string> scriptureList = new List<string>();
         scriptureList.Add("2 Nephi 32: 3 Angels speak by the power of the Holy Ghost; wherefore, they speak the words of Christ. Wherefore, I said unto you, bfeast upon the cwords of Christ; for behold, the words of Christ will dtell you all things what ye should do.");
         scriptureList.Add("Mosiah 4: 30 But this much I can tell you, that if ye do not awatch yourselves, and your bthoughts, and your cwords, and your deeds, and observe the commandments of God, and dcontinue in the faith of what ye have heard concerning the coming of our Lord, even unto the end of your lives, ye must perish. And now, O man, remember, and perish not.");
@@ -17,9 +18,10 @@ class Program
         scriptureList.Add("Helaman 5: 12 And now, my sons, remember, remember that it is upon the arock of our Redeemer, who is Christ, the Son of God, that ye must build your bfoundation; that when the devil shall send forth his mighty winds, yea, his shafts in the whirlwind, yea, when all his hail and his mighty cstorm shall beat upon you, it shall have no power over you to drag you down to the gulf of misery and endless wo, because of the rock upon which ye are built, which is a sure foundation, a foundation whereon if men build they cannot fall.");
 
         // Display scrirpture from list
-        int count = scriptureList.Count();
+        int count1 = scriptureList.Count();
         Random rnd = new Random();
-        int randscripture  = rnd.Next(count);
+        int randscripture  = rnd.Next(count1);
+        string rando = scriptureList[randscripture];
         Console.WriteLine(scriptureList[randscripture]);
         Console.WriteLine();
 
@@ -28,17 +30,36 @@ class Program
         while (Console.ReadKey().Key == ConsoleKey.Enter) 
         {
                     
-            Console.WriteLine("hi yo");
+
+               for (int i = 0; i < 9; i++) 
+               {
+
+                int count2 = 0;
+                string[] wordlist = rando.Split(" ");
+                foreach(string word in wordlist)
+                {
+                    count2++;
+                }
+                Console.WriteLine(wordlist);
+                
+                Random round = new Random();
+                int randomnumbers  = round.Next(0, count2);
+                Console.WriteLine(randomnumbers);
+
+
+                //Replace words with ____ and display edited scripture 
+
+                string replace = rando.Replace(wordlist[randomnumbers], "__");
+                scriptureList.Add(replace);
+
+               }
+                int max = scriptureList.Count();
+                Console.WriteLine(rando);
+            
 
         }
 
         Console.WriteLine();
         Console.WriteLine("Thank you for memorizing");
-
-
-
-
-
     }
 }
-
