@@ -5,16 +5,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        DisplayMessage();
-        static void DisplayMessage()
-        {
-            DisplayWelcome();
-            string name = PromptUserName();
-            int age = PromptUserNumber();
-            int squareNum = squareNumber(age);
-
-
-        }
 
         static void DisplayWelcome() 
         {
@@ -23,25 +13,35 @@ class Program
 
         static string PromptUserName()
         {
-            Console.WriteLine("Please enter your name: ");
+            Console.Write("Please enter your name: ");
             string userName = Console.ReadLine();
-            PromptUserNumber();
             return userName;
         }
 
         static int PromptUserNumber()
         {
-            Console.WriteLine("Please enter your age: ");
+            Console.Write("Please enter your age: ");
             string userNum = Console.ReadLine();
             int userNumber = int.Parse(userNum);
             return userNumber;
         }
 
-        static int squareNumber(int age)
+        static int SquaredNumber( int age)
         {
-            int squared = age * age;
-            return squared;
+            int num = age * age;
+            return num;
         }
+
+        static void DisplayResult(string name, int numSquared)
+        {
+            Console.WriteLine($"{name}, The square of your number is {numSquared}");
+        }
+
+        DisplayWelcome();
+        string name = PromptUserName();
+        int age = PromptUserNumber();
+        int numSquared = SquaredNumber(age);
+        DisplayResult(name, numSquared);
 
     }
 }
