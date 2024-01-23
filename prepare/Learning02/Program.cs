@@ -18,6 +18,14 @@ class Program
         job2._startYear = 2022;
         job2._endYear = 2023;
 
+        Job job3 = new Job();
+        job3._jobTitle = "Lead engineer";
+        job3._company = "Activion";
+        job3._startYear = 1999;
+        job3._endYear = 2021;
+
+        job3.Display();
+
         Resume myResume = new Resume();
         myResume._name = "Allison Rose";
 
