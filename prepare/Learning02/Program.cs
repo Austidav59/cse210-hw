@@ -24,12 +24,14 @@ class Program
         job3._startYear = 1999;
         job3._endYear = 2021;
 
-        job3.Display();
+        // job3.Display();
 
         Resume myResume = new Resume();
         myResume._name = "Allison Rose";
 
         myResume._jobs.Add(job1);
+        myResume._jobs.Add(job2);
+        myResume._jobs.Add(job3);
 
         myResume.Display();
     }
