@@ -46,7 +46,7 @@ public class Main
 
     public void DisplayAllEntries()
     {
-
+        // loop through each Journal entry 
         foreach (string JournalEntry in Jouranl1._EntryList)
         {
             Console.WriteLine(JournalEntry);
@@ -74,7 +74,18 @@ public class Main
 
     public void Load()
     {
-        
+        // Choose File to open
+        Console.WriteLine("What file do you want to open? ");
+        string filename = Console.ReadLine();
 
+        // use the system file reading funciton
+        string[] lines = System.IO.File.ReadAllLines(filename);
+
+        // Loop though file and display each line
+        foreach (string line in lines)
+        {
+            Console.WriteLine(line);
+            Console.WriteLine();
+        }
     }
 }
