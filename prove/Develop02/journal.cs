@@ -1,4 +1,4 @@
-public class Jouranl
+public class Journal
 {
     public List<string> _ListOfPrommpts = new List<string>();
 
@@ -7,7 +7,7 @@ public class Jouranl
 
     public void DisplayPrompts()
     {
-        
+
     }
 
 }
