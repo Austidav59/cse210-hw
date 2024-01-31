@@ -1,17 +1,12 @@
 using System;
 using System.Text.Json.Nodes;
+using System.IO; 
+
 
 class Program
 {
     static void Main(string[] args)
     {
-        // Add List of prompts fr journal entry.
-        Journal Jouranl1 = new Journal();
-        Jouranl1._ListOfPrommpts.Add("Who was the most interesting person I interacted with today?");
-        Jouranl1._ListOfPrommpts.Add("What was the best part of my day?");
-        Jouranl1._ListOfPrommpts.Add("How did I see the hand of the Lord in my life today?");
-        Jouranl1._ListOfPrommpts.Add("What was the strongest emotion I felt today?");
-        Jouranl1._ListOfPrommpts.Add("If I had one thing I could do over today, what would it be?");
 
         //instance of Main Class
         Main Main1 = new Main();
@@ -31,14 +26,14 @@ class Program
             Console.WriteLine();
 
             // User Enters number to program
-            Console.Write("Waht would you like to do?");
+            Console.WriteLine("What would you like to do? ");
             string userstring = Console.ReadLine();
             int userNum = int.Parse(userstring);
 
             // if else statements
             if (userNum == 1)
             {
-                Jouranl1.DisplayPrompts();
+                Main1.AddEntry();
             }
             else if (userNum == 2)
             {
