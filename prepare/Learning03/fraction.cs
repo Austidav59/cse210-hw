@@ -1,7 +1,6 @@
 
 public class Fraction
 {
-
     // attributes
     private int _top;
 
