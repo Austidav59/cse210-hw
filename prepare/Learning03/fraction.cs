@@ -12,9 +12,9 @@ public class Fraction
 
     }
 
-    public void FractionWholeNumber()
+    public void FractionWholeNumber(int wholeNumber)
     {
-
+        _bottom = wholeNumber;
     }
 
     public void FractionTopandBottom(int top , int bottom)
@@ -30,7 +30,7 @@ public class Fraction
 
     public void SetTop( int top)
     {
-        
+        top = _top;
     }
 
     // Get and Set Bottom
@@ -41,7 +41,7 @@ public class Fraction
 
     public void SetBottom(int bottom)
     {
-
+        bottom = _bottom;
     }
 
     public string GetFractionString() 
@@ -50,9 +50,9 @@ public class Fraction
         return fractionString;
     }
 
-    public double GetDecimalValue()
+    public double GetDecimalValue(int top , int bottom)
     {
-        double decimalValue = 0;
+        double decimalValue = top / bottom;
         return decimalValue;
     }
 } 
