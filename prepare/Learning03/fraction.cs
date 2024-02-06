@@ -7,52 +7,37 @@ public class Fraction
     private int _bottom;
 
     // Methods
-    public void FractionDefault()
+    public Fraction()
     {
-
+        // Default to 1/1
+        _top = 1;
+        _bottom = 1;
     }
 
-    public void FractionWholeNumber(int wholeNumber)
+    public Fraction(int wholeNumber)
     {
-        _bottom = wholeNumber;
+        _top = wholeNumber;
+        _bottom = 1;
     }
 
-    public void FractionTopandBottom(int top , int bottom)
+    public Fraction(int top, int bottom)
     {
-
+        _top = top;
+        _bottom = bottom;
     }
 
-    // Get and Set Top
-    public void GetTop()
+    public string GetFractionString()
     {
-
+        // Notice that this is not stored as a member variable.
+        // Is is just a temporary, local variable that will be recomputed each time this is called.
+        string text = $"{_top}/{_bottom}";
+        return text;
     }
 
-    public void SetTop( int top)
+    public double GetDecimalValue()
     {
-        top = _top;
-    }
-
-    // Get and Set Bottom
-    public void GetBottom()
-    {
-
-    }
-
-    public void SetBottom(int bottom)
-    {
-        bottom = _bottom;
-    }
-
-    public string GetFractionString() 
-    {
-        string fractionString = $"";
-        return fractionString;
-    }
-
-    public double GetDecimalValue(int top , int bottom)
-    {
-        double decimalValue = top / bottom;
-        return decimalValue;
+        // Notice that this is not stored as a member variable.
+        // Is will be recomputed each time this is called.
+        return (double)_top / (double)_bottom;
     }
 } 
