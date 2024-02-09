@@ -3,7 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.IO; 
 
 
-public class Main
+public class Entry
 {
 
 
@@ -14,11 +14,11 @@ public class Main
     public void AddEntry()
     {
         // Add List of prompts fr journal entry.
-        Jouranl1._ListOfPrommpts.Add("Who was the most interesting person I interacted with today?");
-        Jouranl1._ListOfPrommpts.Add("What was the best part of my day?");
-        Jouranl1._ListOfPrommpts.Add("How did I see the hand of the Lord in my life today?");
-        Jouranl1._ListOfPrommpts.Add("What was the strongest emotion I felt today?");
-        Jouranl1._ListOfPrommpts.Add("If I had one thing I could do over today, what would it be?");
+        Jouranl1.AddListPrompts("Who was the most interesting person I interacted with today?");
+        Jouranl1.AddListPrompts("What was the best part of my day?");
+        Jouranl1.AddListPrompts("How did I see the hand of the Lord in my life today?");
+        Jouranl1.AddListPrompts("What was the strongest emotion I felt today?");
+        Jouranl1.AddListPrompts("If I had one thing I could do over today, what would it be?");
 
         // count list length
         int length = Jouranl1._ListOfPrommpts.Count();
@@ -87,5 +87,15 @@ public class Main
             Console.WriteLine(line);
             Console.WriteLine();
         }
+
+    }
+
+    public void AddNewPrompt()
+    {
+        Console.WriteLine("Enter a new prompt: ");
+        string newPrompt = Console.ReadLine();
+
+        Jouranl1._ListOfPrommpts.Add(newPrompt);
+
     }
 }
