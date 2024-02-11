@@ -14,7 +14,7 @@ class Program
         // While loop to keep programing running until gioven 0
         int number = -1;
 
-        while (number != 5)
+        while (number != 6)
         {
             // Display Menu
             Console.WriteLine("Please select one of the following choices:");
@@ -54,7 +54,7 @@ class Program
             }
             else
             {
-                number = 5;
+                number = -1;
             }
 
         }

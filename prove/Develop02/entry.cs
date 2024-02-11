@@ -6,7 +6,6 @@ using System.IO;
 public class Entry
 {
 
-
     Journal Jouranl1 = new Journal();
 
     DateTime date = DateTime.Now;
