@@ -13,4 +13,9 @@ public class Scripture
     {
         return _scriptureVerses[verseIndex];
     }
+
+    public int CountVerses()
+    {
+        return _scriptureVerses.Count();
+    }
 }
