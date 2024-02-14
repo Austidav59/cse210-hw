@@ -80,12 +80,10 @@ public class Scripture
             {
                 return false;
             }
-            else
-            {
-                return true;
-            }
 
         }
+
+        return false;
     }
 
 
