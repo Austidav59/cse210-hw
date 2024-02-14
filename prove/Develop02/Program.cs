@@ -8,13 +8,13 @@ class Program
     static void Main(string[] args)
     {
 
-        //instance of Main Class
-        Main Main1 = new Main();
+        //instance of entry Class
+        Entry entry1 = new Entry();
 
         // While loop to keep programing running until gioven 0
         int number = -1;
 
-        while (number != 5)
+        while (number != 6)
         {
             // Display Menu
             Console.WriteLine("Please select one of the following choices:");
@@ -22,7 +22,8 @@ class Program
             Console.WriteLine("2. Display");
             Console.WriteLine("3. Load");
             Console.WriteLine("4. Save");
-            Console.WriteLine("5. Quit");
+            Console.WriteLine("5. Add Prompt");
+            Console.WriteLine("6. Quit");
             Console.WriteLine();
 
             // User Enters number to program
@@ -33,23 +34,27 @@ class Program
             // if else statements
             if (userNum == 1)
             {
-                Main1.AddEntry();
+                entry1.AddEntry();
             }
             else if (userNum == 2)
             {
-                Main1.DisplayAllEntries();
+                entry1.DisplayAllEntries();
             }
             else if (userNum == 3)
             {
-                Main1.Load();
+                entry1.Load();
             }
             else if (userNum == 4)
             {
-                Main1.SaveEntry();
+                entry1.SaveEntry();
+            }
+            else if (userNum == 5)
+            {
+                entry1.AddNewPrompt();
             }
             else
             {
-                number = 5;
+                number = -1;
             }
 
         }
