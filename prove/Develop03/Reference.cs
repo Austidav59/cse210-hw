@@ -8,11 +8,11 @@ public class Reference
     
     public void SetReference(string reference)
     {
-        _references.Add(reference)
+        _references.Add(reference);
     }
 
     public string GetReference(int referenceIndex)
     {
-        return _references[referenceIndex]
+        return _references[referenceIndex];
     }
 }
