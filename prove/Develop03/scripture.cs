@@ -3,13 +3,14 @@ public class Scripture
 {
     private List<string> _scriptureVerses = new List<string>();
 
-    public void SetVerses()
-    {
 
+    public void SetVerses(string verse)
+    {
+        _scriptureVerses.Add(verse);
     }
 
-    public void GetScriptureVerses()
+    public string GetScriptureVerses(int verseIndex)
     {
-        
+        return _scriptureVerses[verseIndex];
     }
 }

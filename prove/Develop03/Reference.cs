@@ -6,13 +6,13 @@ public class Reference
     
 
     
-    public void SetReference()
+    public void SetReference(string reference)
     {
-
+        _references.Add(reference)
     }
 
-    public void GetReference()
+    public string GetReference(int referenceIndex)
     {
-
+        return _references[referenceIndex]
     }
 }
