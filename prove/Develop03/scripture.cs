@@ -78,6 +78,7 @@ public class Scripture
         {
             if (number == num)
             {
+                
                 return false;
             }
 

@@ -54,14 +54,21 @@ public class Word
             // count list length
             int parsedListsLength = scripture1.CountParsedList();
 
-            // generate 3 Random Number 0 to list length
-            int Num1 = rnd.Next(0,parsedListsLength);
-            int num2 = rnd.Next(0,parsedListsLength);
-            int Num3 = rnd.Next(0,parsedListsLength);
 
-            //check numbers
-            scripture1.CheckIndexUse(Num1);
+            int num0 = -1;
 
+            while (num0 != 0)
+            {
+                // generate 3 Random Number 0 to list length
+                int num1 = rnd.Next(0,parsedListsLength);
+ 
+                //check numbers
+                if (scripture1.CheckIndexUse(num1) == false)
+                {
+
+                }
+                
+            }
 
 
 
