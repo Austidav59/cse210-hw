@@ -11,6 +11,10 @@ public class Scripture
 
     private List<string> _verse3 = new List<string>();
 
+    private List<string> _addverse = new List<string>();
+
+    private List<string> _addReference = new List<string>();
+
     public Scripture(string verse, int num)
     {
 
@@ -36,6 +40,14 @@ public class Scripture
                 _verse3.Add(word);
             }
         }
+    }
+
+    //constructor tp add new scripture
+    public Scripture(string verse, string refer)
+    {
+        _addReference.Add(verse);
+
+        _addReference.Add(refer);
     }
 
     public void getVerse1()

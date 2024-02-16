@@ -44,6 +44,7 @@ public class Word
             int randomNumber1 = rnd.Next(0,2);
             randomNumber1 = randomReference;
 
+            // display correct scripture and refferece according to random number
             if (randomNumber1 == 0)
             {
                 Console.WriteLine($"{reference1} {verse1}");
@@ -73,7 +74,7 @@ public class Word
             }
 
 
-
+                // count
                 count = count + 1;
         }
         else
@@ -82,7 +83,7 @@ public class Word
            int counted = _parsedWordsToEdit.Count();
 
 
-
+            // Add the number of words to a list
            for (int i = 0; i < counted ; i++ )
            {
             _indexesReplaced.Add(i);
@@ -90,20 +91,28 @@ public class Word
 
             int loop = 0;
 
+            // start while loop
            while (loop != 3)
            {
+                // count how items are in index list
                 int indexCounted = _indexesReplaced.Count();
+                // create random number from range of index list
                 int randNumCount = rnd.Next(0,indexCounted + 1);
+
+                //check to see if randonnum exists in list
                 foreach (int num in _indexesReplaced)
                 {
                     if (randNumCount == num)
                     {
+                        //remove index from list
                         _indexesReplaced.Remove(randNumCount);
                         string indexChanged = _parsedWordsToEdit[randNumCount];
+                        // loop through list of strings and find randomly chosen word
                         foreach (string Word in _parsedWordsToEdit)
                         {
                             if (Word == indexChanged)
                             {
+                                // replace found word woth "___"
                                 _parsedWordsToEdit[randNumCount] = "___";
                                 loop =  loop + 1;
                                 break;
@@ -118,7 +127,10 @@ public class Word
             // Congregate lsit and display
             if (_indexesReplaced.Count() > 0 )
             {
+                // concatinate all strings together into one string
                 string editeVerse = _parsedWordsToEdit.Aggregate((current, next) => current + " " + next);
+
+                // display correct reference with correct edited list
                 if (randomReference == 0)
                 {
                     Console.WriteLine($"{reference1} {editeVerse}");
