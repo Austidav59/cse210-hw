@@ -1,5 +1,6 @@
 
 using System.Runtime.CompilerServices;
+using System.Linq;
 
 public class Word
 {
@@ -13,15 +14,18 @@ public class Word
 
     private int count = 0;
 
+    int randomReference = 0;
+    // reference strings and objects created
+    string reference1 = "1 Nephi:1";
+    string reference2 = "Alma 33:22";
+    string reference3 = "Helaman 5:11-12";
+
     public void DeleteWords()
     {
         if (count == 0)
         {
 
-            // reference strings and objects created
-            string reference1 = "1 Nephi:1";
-            string reference2 = "Alma 33:22";
-            string reference3 = "Helaman 5:11-12";
+            //set values
 
             Reference refer1 = new Reference(reference1,1);
             Reference refer2 = new Reference(reference2,2);
@@ -38,6 +42,7 @@ public class Word
             Scripture scripture3 = new Scripture(verse3, true);
                 // generate Random Number 0 to list length
             int randomNumber1 = rnd.Next(0,2);
+            randomNumber1 = randomReference;
 
             if (randomNumber1 == 0)
             {
@@ -87,7 +92,8 @@ public class Word
 
            while (loop != 3)
            {
-                int randNumCount = rnd.Next(0,counted + 1);
+                int indexCounted = _indexesReplaced.Count();
+                int randNumCount = rnd.Next(0,indexCounted + 1);
                 foreach (int num in _indexesReplaced)
                 {
                     if (randNumCount == num)
@@ -109,6 +115,33 @@ public class Word
                 }
            }
             
+            // Congregate lsit and display
+            if (_indexesReplaced.Count() > 0 )
+            {
+                string editeVerse = _parsedWordsToEdit.Aggregate((current, next) => current + " " + next);
+                if (randomReference == 0)
+                {
+                    Console.WriteLine($"{reference1} {editeVerse}");
+                }
+                else if (randomReference == 1)
+                {
+                    Console.WriteLine($"{reference2} {editeVerse}");
+                }
+                else
+                {
+                    Console.WriteLine($"{reference3} {editeVerse}");
+                }
+                
+            }
+
+
+
+
+
+
+
+
+
 
         }
 

@@ -13,14 +13,14 @@ class Program
 
         while (enterLoop != "quit")
         {
-            Console.WriteLine("Enter y to continue");
-            Console.WriteLine("Enter n to quit");
+            Console.WriteLine("press 1 to continue");
+            Console.WriteLine("Type quit to end");
 
             Console.WriteLine();
             Console.WriteLine("What would you like to do?");
             string userInput = Console.ReadLine();
 
-            if (userInput == "y")
+            if (userInput == "1")
             {
 
                 word1.DeleteWords();
