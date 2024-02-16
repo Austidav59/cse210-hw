@@ -1,18 +1,18 @@
 using System;
 using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // intances of each class
-        Word word1 = new Word();
+         Word word1 = new Word();
+
 
         string enterLoop = "enter";
 
         while (enterLoop != "quit")
         {
-            Console.WriteLine();
             Console.WriteLine("Enter y to continue");
             Console.WriteLine("Enter n to quit");
 

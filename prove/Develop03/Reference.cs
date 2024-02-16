@@ -1,18 +1,33 @@
 
 public class Reference
 {
-    private List<string> _references = new List<string>();
 
-    
+    private string _reference1;
 
-    
-    public void SetReference(string reference)
+    private string _reference2;
+
+    private string _reference3;
+
+
+    public Reference(string reference, int num)
     {
-        _references.Add(reference);
-    }
-
-    public string GetReference(int referenceIndex)
-    {
-        return _references[referenceIndex];
+        if (num == 1)
+        {
+            reference = _reference1;
+        }
+        else if (num == 2)
+        {
+            reference = _reference2;
+        }
+        else
+        {
+            reference = _reference3;
+        }
+        
     }
 }
+
+
+
+
+
