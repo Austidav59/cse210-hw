@@ -92,7 +92,7 @@ public class Word
             int loop = 0;
 
             // start while loop
-           while (loop != 3)
+           while (loop != 8)
            {
                 // count how items are in index list
                 int indexCounted = _indexesReplaced.Count();
