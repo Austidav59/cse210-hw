@@ -13,9 +13,11 @@ class Program
 
         while (enterLoop != "quit")
         {
-            Console.WriteLine("press 1 to continue");
-            Console.WriteLine("Type quit to end");
+            Console.WriteLine();
+            Console.WriteLine("Press 1 to continue");
             Console.WriteLine("Press 2 to add a scripture ");
+            Console.WriteLine("Type quit to end");
+            
 
             Console.WriteLine();
             Console.WriteLine("What would you like to do?");
