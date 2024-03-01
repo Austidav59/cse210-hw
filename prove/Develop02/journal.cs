@@ -9,7 +9,7 @@ public class Journal
 
     public void AddListPrompts(string prompts)
     {
-        _ListOfPrompts.Add(prompts);
+        _ListOfPrommpts.Add(prompts);
        
     }
 
