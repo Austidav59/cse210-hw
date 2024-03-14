@@ -15,7 +15,7 @@ public class EternalGoal : Goal
 
     public override void CreateNewGoal()
     {
-        
+        Console.WriteLine("Working here!");
     }
 
 

@@ -15,6 +15,10 @@ public class SimpleGoal : Goal
 
     public override void CreateNewGoal()
     {
+        Console.WriteLine(_points);
+        Console.WriteLine(_description);
+        Console.WriteLine(_name);
+
 
     }
 

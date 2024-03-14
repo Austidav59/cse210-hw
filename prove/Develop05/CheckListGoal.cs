@@ -17,7 +17,7 @@ public class CheckListGoal : Goal
 
     public override void CreateNewGoal()
     {
-
+        Console.WriteLine("Working here!");
     }
 
 
