@@ -7,6 +7,11 @@ public class CheckListGoal : Goal
     private int _numOfChecks;
     private string _name;
 
+    // protected List<float> _neededToComplete = new List<float>();
+
+    // protected List<string> _allGoals = new List<string>();
+    // protected List<int> _totalPointsAdded = new List<int>();
+
     public CheckListGoal(int points, string description, int numOfChecks, string name)
     {
         _points = points;
@@ -15,9 +20,15 @@ public class CheckListGoal : Goal
         _name = name;
     }
 
+
     public override void CreateNewGoal()
     {
-        Console.WriteLine("Working here!");
+        _allGoals.Add(_notCheked);
+        _allGoals.Add(_name);
+        _allGoals.Add(_description);
+        _allGoals.Add("3");
+       _totalPointsAdded.Add(_points);
+        _neededToComplete.Add(_numOfChecks);
     }
 
 

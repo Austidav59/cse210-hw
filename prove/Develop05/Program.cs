@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {    
@@ -7,13 +8,16 @@ class Program
     {
         // intantiate classes
         Goal goal1 = new Goal();
+        SimpleGoal simpleGoal1 = new SimpleGoal();
+
+
 
 
         int loop = -1;
         while (loop != 6)
         {
             // total points 
-            Console.WriteLine($"You have {goal1.GetTotalPoints} points");
+            Console.WriteLine($"You have {goal1.GetTotalPoints()} points");
 
             // menu options printed out
             Console.WriteLine("Menu Option:");
@@ -48,16 +52,16 @@ class Program
                     Console.WriteLine("What is the name of you mini goal: ");
                     string name = Console.ReadLine();
 
-                    Console.WriteLine("What is a short descirpiton: ");
+                    
                     string description = Console.ReadLine();
 
                     Console.WriteLine("How many points is this goal worth? ");
                     string intString = Console.ReadLine();
                     int pointsNum = int.Parse(intString);
 
-                    SimpleGoal simpleGoal1 = new SimpleGoal(pointsNum, description, name);
+                    SimpleGoal simpleGoal2 = new SimpleGoal(pointsNum, description, name);
 
-                    simpleGoal1.CreateNewGoal();
+                    simpleGoal2.CreateNewGoal();
                 }
                 else if (userGuess == 2)
                 {
@@ -100,7 +104,7 @@ class Program
             }
             else if (userNum == 2)
             {
-                goal1.ListGoals();
+                simpleGoal1.ListGoals();
             }
             else if (userNum == 3)
             {
@@ -117,14 +121,6 @@ class Program
             else
                 // exit the loop
                 loop = 6;
-
-
-
-
-
-
-
-
 
         }
     }
