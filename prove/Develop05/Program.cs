@@ -21,12 +21,14 @@ class Program
 
             // menu options printed out
             Console.WriteLine("Menu Option:");
+            Console.WriteLine(" 0. Add to existing file");
             Console.WriteLine(" 1. Create New Goal");
             Console.WriteLine(" 2. List Goals");
             Console.WriteLine(" 3. Save Goals");
             Console.WriteLine(" 4. Load Goals");
             Console.WriteLine(" 5. Record Event");
             Console.WriteLine(" 6. Quit");
+
 
             // select from menu
             Console.WriteLine("Select a choice from the menu? ");

@@ -13,19 +13,18 @@ public class Reference
     {
         if (num == 1)
         {
-            reference = _reference1;
+            _reference1 = reference;
         }
         else if (num == 2)
         {
-            reference = _reference2;
+            _reference2 = reference;
         }
         else
         {
-            reference = _reference3;
-        }
+            _reference3 = reference;
         
-    }
-}
+        }
+    }}
 
 
 
