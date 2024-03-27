@@ -142,35 +142,8 @@ public class Word
                 else
                 {
                     Console.WriteLine($"{reference3} {editeVerse}");
-                }
-                
+                }        
             }
-
-
-
-
-
-
-
-
-
-
         }
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
 }
