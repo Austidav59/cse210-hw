@@ -2,9 +2,9 @@ public abstract class Activity
 {
 
     protected string _date;
-    protected string _lengthMiniutes;
+    protected int _lengthMiniutes;
 
-    public Activity(string date, string lengthminiutes)
+    public Activity(string date, int lengthminiutes)
     {
         _date = date;
         _lengthMiniutes = lengthminiutes;
